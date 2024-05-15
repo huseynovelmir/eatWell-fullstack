@@ -1,0 +1,32 @@
+.ourOffer {
+  width: 100%;
+  padding: 20px 0px;
+  .container {
+    max-width: 1200px;
+    padding: 10px 0px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    span {
+      font-size: 16px;
+      color: #d9d9d9;
+    }
+    h1 {
+      font-size: 56px;
+    }
+    p {
+      font-size: 20px;
+      color: #d9d9d9;
+      margin-inline: 300px;
+    }
+  }
+  .mySwiper {
+    background-color: darkblue;
+  }
+  .swiper {
+    background-color: deeppink;
+  }
+}
