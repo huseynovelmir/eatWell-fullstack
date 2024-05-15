@@ -1,27 +1,100 @@
 import style from "./style.module.scss";
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import fish from "../../assets/images/fish.jpg";
+
+const handleDragStart = (e) => e.preventDefault();
 const OurOffer = () => {
+  const responsive = {
+    1200: { items: 1 },
+    1201: { items: 3 },
+  };
+
+  const items = [
+    <div className={style.card}>
+      <img src={fish} alt="" />
+      <span className={style.span}>$39.00</span>
+      <h4 className={style.h4}>Salmon Fish</h4>
+      <p className={style.p}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure et neque,
+        eligendi tempora expedita repudiandae harum, mollitia quisquam culpa rem
+        error, quod dolore pariatur adipisci hic repellendus enim. Quo, neque.
+      </p>
+      <button className={style.caruselbtn}>order now</button>
+    </div>,
+    <div className={style.card}>
+      <img src={fish} alt="" />
+      <span className={style.span}>$39.00</span>
+      <h4 className={style.h4}>Salmon Fish</h4>
+      <p className={style.p}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure et neque,
+        eligendi tempora expedita repudiandae harum, mollitia quisquam culpa rem
+        error, quod dolore pariatur adipisci hic repellendus enim. Quo, neque.
+      </p>
+      <button className={style.caruselbtn}>order now</button>
+    </div>,
+    <div className={style.card}>
+      <img src={fish} alt="" />
+      <span className={style.span}>$39.00</span>
+      <h4 className={style.h4}>Salmon Fish</h4>
+      <p className={style.p}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure et neque,
+        eligendi tempora expedita repudiandae harum, mollitia quisquam culpa rem
+        error, quod dolore pariatur adipisci hic repellendus enim. Quo, neque.
+      </p>
+      <button className={style.caruselbtn}>order now</button>
+    </div>,
+    <div className={style.card}>
+      <img src={fish} alt="" />
+      <span className={style.span}>$39.00</span>
+      <h4 className={style.h4}>Salmon Fish</h4>
+      <p className={style.p}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure et neque,
+        eligendi tempora expedita repudiandae harum, mollitia quisquam culpa rem
+        error, quod dolore pariatur adipisci hic repellendus enim. Quo, neque.
+      </p>
+      <button className={style.caruselbtn}>order now</button>
+    </div>,
+    <div className={style.card}>
+      <img src={fish} alt="" />
+      <span className={style.span}>$39.00</span>
+      <h4 className={style.h4}>Salmon Fish</h4>
+      <p className={style.p}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure et neque,
+        eligendi tempora expedita repudiandae harum, mollitia quisquam culpa rem
+        error, quod dolore pariatur adipisci hic repellendus enim. Quo, neque.
+      </p>
+      <button className={style.caruselbtn}>order now</button>
+    </div>,
+    <div className={style.card}>
+      <img src={fish} alt="" />
+      <span className={style.span}>$39.00</span>
+      <h4 className={style.h4}>Salmon Fish</h4>
+      <p className={style.p}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure et neque,
+        eligendi tempora expedita repudiandae harum, mollitia quisquam culpa rem
+        error, quod dolore pariatur adipisci hic repellendus enim. Quo, neque.
+      </p>
+      <button className={style.caruselbtn}>order now</button>
+    </div>,
+  ];
   return (
     <div className={style.ourOffer}>
       <div className={style.container}>
         <span>OUR OFFERS</span>
         <h1>Our Offer This Summer</h1>
+
         <p>
           Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia, there live the blind texts.
         </p>
-        <Swiper className={style.mySwiper}>
-          <SwiperSlide className={style.swiper}>Slide 1</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 2</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 3</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 4</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 5</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 6</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 7</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 8</SwiperSlide>
-          <SwiperSlide className={style.swiper}>Slide 9</SwiperSlide>
-        </Swiper>
+        <AliceCarousel
+          className={style.cards}
+          mouseTracking
+          items={items}
+          responsive={responsive}
+          controlsStrategy="alternate"
+        />
       </div>
     </div>
   );

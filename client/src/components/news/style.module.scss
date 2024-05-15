@@ -1,5 +1,4 @@
-@import "react-alice-carousel/lib/scss/alice-carousel.scss";
-.ourOffer {
+.news {
   width: 100%;
   padding: 20px 0px;
   background-color: #f8f9fa;
@@ -10,24 +9,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
     text-align: center;
+    gap: 10px;
     span {
-      font-size: 16px;
-      color: #d9d9d9;
-    }
-    h1 {
       font-size: 56px;
     }
     p {
       font-size: 20px;
-      color: #d9d9d9;
+      color: #c6c7c7;
       margin-inline: 300px;
     }
-
+    .cards {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     .card {
-      width: 90%;
-      height: 550px;
+      width: 30%;
+      height: 600px;
       display: flex;
       flex-direction: column;
       background-color: white;
@@ -51,31 +51,18 @@
   }
 }
 @media screen and (max-width: 1200px) {
-  @import "react-alice-carousel/lib/scss/alice-carousel.scss";
-  .ourOffer {
-    width: 100%;
-    padding: 20px 0px;
-    background-color: #f8f9fa;
+  .news {
     .container {
-      max-width: 1200px;
-      padding: 10px 0px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 20px;
-      text-align: center;
-      span {
-        font-size: 16px;
-        color: #d9d9d9;
-      }
-      h1 {
-        font-size: 56px;
-      }
       p {
-        font-size: 20px;
-        color: #d9d9d9;
         margin-inline: 0px;
+      }
+      .cards {
+        gap: 10px;
+        flex-direction: column;
+        .card {
+          width: 90%;
+          height: 650px;
+        }
       }
     }
   }

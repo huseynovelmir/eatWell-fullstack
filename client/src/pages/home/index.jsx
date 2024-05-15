@@ -2,6 +2,8 @@ import React from "react";
 import style from "./style.module.scss";
 import OurStory from "../../components/ourStory";
 import OurOffer from "../../components/ourOffer";
+import News from "../../components/news";
+import Gallery from "../../components/gallery";
 const Home = () => {
   return (
     <div className={style.home}>
@@ -14,6 +16,8 @@ const Home = () => {
       </div>
       <OurStory />
       <OurOffer />
+      <News />
+      <Gallery />
     </div>
   );
 };
